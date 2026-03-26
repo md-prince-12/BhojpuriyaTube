@@ -242,19 +242,200 @@
             color: #606060;
         }
 
+        /* Tablet & Mobile */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 150px;
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+        }
+
         @media (max-width: 768px) {
+            header {
+                padding: 12px 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
             .sidebar {
                 display: none;
             }
 
+            .container {
+                flex-direction: column;
+            }
+
+            .main-content {
+                padding: 12px;
+            }
+
             .search-bar {
-                max-width: 300px;
-                margin: 0 15px;
+                max-width: 200px;
+                margin: 0 10px;
+                flex: 0.5;
+            }
+
+            .search-bar input {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+
+            .search-bar button {
+                padding: 6px 12px;
+            }
+
+            .user-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 12px;
+            }
+
+            .categories {
+                gap: 8px;
+                margin-bottom: 15px;
+            }
+
+            .category-btn {
+                padding: 6px 12px;
+                font-size: 12px;
             }
 
             .video-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 15px;
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 12px;
+            }
+
+            .video-card {
+                border-radius: 4px;
+            }
+
+            .video-thumbnail {
+                height: 90px;
+            }
+
+            .video-info {
+                padding: 8px;
+            }
+
+            .video-title {
+                font-size: 12px;
+                margin-bottom: 3px;
+            }
+
+            .video-description {
+                font-size: 11px;
+                display: none;
+            }
+
+            .channel-avatar {
+                width: 28px;
+                height: 28px;
+            }
+
+            .channel-info {
+                font-size: 11px;
+            }
+
+            .channel-name {
+                font-size: 11px;
+            }
+
+            .channel-stats {
+                font-size: 10px;
+            }
+
+            .video-channel {
+                gap: 6px;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 8px;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .logo {
+                font-size: 16px;
+                order: 1;
+            }
+
+            .search-bar {
+                max-width: 100%;
+                margin: 0;
+                order: 3;
+                flex: 1;
+            }
+
+            .search-bar input {
+                padding: 5px 10px;
+                font-size: 12px;
+                border-radius: 15px 0 0 15px;
+            }
+
+            .search-bar button {
+                padding: 5px 10px;
+                border-radius: 0 15px 15px 0;
+            }
+
+            .user-icon {
+                width: 24px;
+                height: 24px;
+                order: 2;
+            }
+
+            .main-content {
+                padding: 8px;
+            }
+
+            .categories {
+                gap: 6px;
+                margin-bottom: 12px;
+                padding-bottom: 8px;
+            }
+
+            .category-btn {
+                padding: 5px 10px;
+                font-size: 11px;
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 8px;
+            }
+
+            .video-thumbnail {
+                height: 80px;
+            }
+
+            .video-info {
+                padding: 6px;
+            }
+
+            .video-title {
+                font-size: 11px;
+                -webkit-line-clamp: 1;
+            }
+
+            .channel-avatar {
+                width: 24px;
+                height: 24px;
+            }
+
+            .channel-stats {
+                font-size: 9px;
             }
         }
     </style>
